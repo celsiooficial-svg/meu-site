@@ -1,11 +1,12 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { Users, Wallet, Rocket, BarChart3 } from "lucide-react"
-import { FeatureCard } from "@/components/feature-card"
-import { OnlineBadge } from "@/components/online-badge"
-import { SocialLinks } from "@/components/social-links"
-import { LoginForm } from "@/components/login-form"
+import { useState } from 'react'
+import { Wallet, Rocket, BarChart3 } from 'lucide-react'
+import { Navigation } from '@/components/navigation'
+import { FeatureCard } from '@/components/feature-card'
+import { OnlineBadge } from '@/components/online-badge'
+import { SocialLinks } from '@/components/social-links'
+import { LoginForm } from '@/components/login-form'
 
 export default function CDLLandingPage() {
   const [showPanel, setShowPanel] = useState(false)
@@ -19,6 +20,7 @@ export default function CDLLandingPage() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#111_0%,_#000_100%)]">
+      <Navigation />
       <div className="container mx-auto px-5 py-12 text-center">
         {/* Logo */}
         <h1 className="text-5xl md:text-6xl font-bold tracking-widest text-primary mb-2">
