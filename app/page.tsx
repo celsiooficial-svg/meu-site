@@ -1,22 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import { Wallet, Rocket, BarChart3 } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
 import { FeatureCard } from '@/components/feature-card'
 import { OnlineBadge } from '@/components/online-badge'
 import { SocialLinks } from '@/components/social-links'
-import { LoginForm } from '@/components/login-form'
+import { CommunitySection } from '@/components/community-section'
 
 export default function CDLLandingPage() {
-  const [showPanel, setShowPanel] = useState(false)
-
-  const handleLogin = () => {
-    setShowPanel(true)
-    setTimeout(() => {
-      window.location.href = "https://discord.gg/exyHqsY3"
-    }, 1500)
-  }
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#111_0%,_#000_100%)]">
@@ -62,8 +53,8 @@ export default function CDLLandingPage() {
         {/* Social Links */}
         <SocialLinks />
 
-        {/* Login Section */}
-        <LoginForm onSubmit={handleLogin} showPanel={showPanel} />
+        {/* Community Section */}
+        <CommunitySection />
 
         {/* Footer */}
         <footer className="mt-16 text-foreground/60 text-sm">
