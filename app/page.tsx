@@ -5,7 +5,6 @@ import { Navigation } from '@/components/navigation'
 import { FeatureCard } from '@/components/feature-card'
 import { OnlineBadge } from '@/components/online-badge'
 import { SocialLinks } from '@/components/social-links'
-import { CommunitySection } from '@/components/community-section'
 
 export default function CDLLandingPage() {
 
@@ -53,8 +52,15 @@ export default function CDLLandingPage() {
         {/* Social Links */}
         <SocialLinks />
 
-        {/* Community Section */}
-        <CommunitySection />
+        {/* Objective Card */}
+        <div className="mt-12 max-w-2xl mx-auto">
+          <div className="bg-white/5 border border-primary/25 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-primary mb-4">🎯 Objetivo do Site</h3>
+            <p className="text-foreground/85">
+              O objetivo deste site é ajudar pessoas a mudarem de vida através de disciplina e conhecimento financeiro.
+            </p>
+          </div>
+        </div>
 
         {/* Footer */}
         <footer className="mt-16 text-foreground/60 text-sm">
