@@ -24,6 +24,13 @@ const articles = [
     excerpt: 'Existem várias formas de ganhar dinheiro na internet. O segredo não é escolher, é começar.',
     category: 'Dinheiro',
     date: '2026-04-28'
+  },
+  {
+    slug: 'motivacao-diaria',
+    title: 'Motivação diária',
+    excerpt: '"Ninguém vai fazer por ti. Levanta e constrói tua vida."',
+    category: 'Motivação',
+    date: '2026-04-28'
   }
 ]
 
