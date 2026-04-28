@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Navigation } from '@/components/navigation'
 
 const categories = [
@@ -7,6 +8,16 @@ const categories = [
   { icon: '🔥', name: 'Motivação' },
   { icon: '🧠', name: 'Mentalidade' },
   { icon: '📈', name: 'Sucesso' },
+]
+
+const articles = [
+  {
+    slug: 'habitos-financeiros',
+    title: '5 hábitos que podem mudar a tua vida financeira',
+    excerpt: 'Se queres melhorar a tua vida financeira, precisas mudar os teus hábitos primeiro.',
+    category: 'Mentalidade',
+    date: '2026-04-28'
+  }
 ]
 
 export default function BlogPage() {
@@ -52,18 +63,46 @@ export default function BlogPage() {
         </div>
 
         {/* Call to Action Section */}
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold text-primary mb-4">🚀 Começa aqui</h2>
-          <p className="text-lg text-foreground/80 mb-8">
+          <p className="text-lg text-foreground/80">
             Explora artigos que podem mudar a tua forma de pensar e agir.
           </p>
-          <a
-            href="#"
-            className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg"
-          >
-            Explorar Artigos
-          </a>
         </div>
+
+        {/* Recent Articles */}
+        <div className="grid grid-cols-1 gap-6 mb-16">
+          {articles.map((article) => (
+            <Link key={article.slug} href={`/blog/${article.slug}`}>
+              <div className="bg-white/5 border border-primary/25 rounded-xl p-8 hover:border-primary/50 hover:translate-y-[-5px] transition-all duration-300 cursor-pointer">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-primary flex-1 pr-4">
+                    {article.title}
+                  </h3>
+                  <span className="text-xs text-foreground/60 whitespace-nowrap">
+                    {new Date(article.date).toLocaleDateString('pt-PT')}
+                  </span>
+                </div>
+                <p className="text-foreground/75 mb-4">
+                  {article.excerpt}
+                </p>
+                <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded">
+                  {article.category}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Empty State Message */}
+        {articles.length === 0 && (
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary mb-4">🚀 Começa aqui</h2>
+            <p className="text-lg text-foreground/80">
+              Explora artigos que podem mudar a tua forma de pensar e agir.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Footer */}
