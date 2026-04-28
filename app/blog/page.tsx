@@ -17,6 +17,13 @@ const articles = [
     excerpt: 'Se queres melhorar a tua vida financeira, precisas mudar os teus hábitos primeiro.',
     category: 'Mentalidade',
     date: '2026-04-28'
+  },
+  {
+    slug: 'ganhar-dinheiro-online',
+    title: 'Como ganhar dinheiro online',
+    excerpt: 'Existem várias formas de ganhar dinheiro na internet. O segredo não é escolher, é começar.',
+    category: 'Dinheiro',
+    date: '2026-04-28'
   }
 ]
 
