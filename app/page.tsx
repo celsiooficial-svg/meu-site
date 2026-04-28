@@ -64,7 +64,10 @@ export default function CDLLandingPage() {
 
         {/* Footer */}
         <footer className="mt-16 text-foreground/60 text-sm">
-          © 2026 CDL - Código Do Lucro | Fundador: Celsio AO
+          <p className="mb-4">© 2026 CDL - Código Do Lucro | Fundador: Celsio AO</p>
+          <a href="/privacidade" className="hover:text-primary transition-colors">
+            Política de Privacidade
+          </a>
         </footer>
       </div>
     </div>
