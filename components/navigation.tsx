@@ -13,6 +13,9 @@ export function Navigation() {
           <Link href="/" className="text-foreground hover:text-primary transition-colors">
             Início
           </Link>
+          <Link href="/blog" className="text-foreground hover:text-primary transition-colors">
+            Blog
+          </Link>
           <Link href="/dicas" className="text-foreground hover:text-primary transition-colors">
             Dicas
           </Link>
